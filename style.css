@@ -271,7 +271,7 @@ p {
 }
 
 .start-container .header .logo {
-    height: 50px;
+    height: 30px;
     width: auto;
     position: absolute;
     left: 50%;
@@ -279,12 +279,11 @@ p {
 }
 
 .start-container .header .icon {
-    height: 30px;
     margin-right: 20px;
 }
 
 .icon img {
-    height: 30px;
+    height: 20px;
 }
 
 .start-container .navbar-bottom {
@@ -297,6 +296,12 @@ p {
     align-items: center;
     height: 60px;
     padding: 20px 20px;
+}
+
+.start-container .navbar-bottom img {
+    height: 60px;
+    width: auto;
+    cursor: pointer;
 }
 
 .start-container .campaign-offer {
