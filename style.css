@@ -159,18 +159,13 @@ p {
     opacity: 0.1;
     animation: fadeTween 1.8s infinite;
     animation-timing-function: ease-in-out;
+    transform-origin: center;
 }
 
 @keyframes fadeTween {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% { opacity: 0; transform: scale(1); }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; transform: scale(1.1); }
 }
 
 .settings {
