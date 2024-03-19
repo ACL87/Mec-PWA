@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="se">
+
+<head>
+    <link rel="manifest" href="manifest.json" />
+
+    <meta charset="utf-8">
+    <mete name="theme-color" content="#000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <title>Mecenat</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="card-cont">
+
+        <div class="card">
+
+            <div class="c-name">
+                <img src="media/logo.png">
+                <h1>Mecenat</h1>
+            </div>
+
+            <div class="c-student">
+                <p id="student_id"></p>
+                <p id="study_location"></p>
+                <p id="term"></p>
+            </div>
+
+            <div class="c-user">
+                <p id="mecenat_id"></p>
+                <p id="firstname"></p>
+                <p id="lastname"></p>
+                <p id="birthdate"></p>
+            </div>
+
+            <div class="c-stamp">
+
+                <p id="valid-txt">DISCOUNTS VALID THRU</p>
+                <p id="valid_date"></p>
+                <div class="border-verified">
+                    <img id="verified-logo" src="media/logo_named.png">
+                    <img id="watermark" src="media/watermark.png">
+                </div>
+
+                <div class="logo-box">
+                    <img id="sj-logo" src="media/sj-logo.png">
+
+                    <div class="border">
+                        <img src="media/tr-logo.png">
+                        <img src="media/sl-logo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img id="close" src="media/close.png">
+
+    <div id="dim_overlay"></div>
+
+    <div class="settings">
+        <p>Bara de fält du fyller i kommer uppdateras</p>
+        <input id="f_firstname" name="firstname" type="text" placeholder="Förnamn">
+        <input id="f_lastname" name="lastname" type="text" placeholder="Efternamn">
+        <input id="f_birthdate" name="birthdate" type="date" placeholder="Födelsedatum">
+        <input id="f_study_location" name="study_location" type="text" placeholder="Studieplats">
+        <input id="f_save" type="button" value="💾 Spara">
+        <input id="f_close" type="button" value="❌ Stäng">
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+
+</html>
