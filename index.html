@@ -20,9 +20,38 @@
 
 <body>
 
+
     <div class="card-cont">
 
-        <div class="card">
+        <div class="start-container">
+            <div class="header">
+                <img class="logo" src="media/logo_white.png">
+
+                <div class="icon">
+                    <img src="media/question.png">
+                    <img src="media/user.png">
+                </div>
+            </div>
+
+            <div class="campaign-offer">
+                <div class="title">Du missar rabatter & kampanjer 😱</div>
+
+                <div class="info">Tacka ja till e-post & notiser från Mecenat och missa inget studentnyttigt.</div>
+
+                <div class="btn-yes">
+                    Ja tack!
+                </div>
+                <div class="btn-no">
+                    Kanske senare
+                </div>
+            </div>
+
+            <div class="navbar-bottom" id="navbar-bottom">
+                <img src="media/nav.png">
+            </div>
+        </div>
+
+        <div class="card" style="display: none;">
 
             <div class="c-name">
                 <img src="media/logo.png">
@@ -37,8 +66,8 @@
 
             <div class="c-user">
                 <p id="mecenat_id"></p>
-                <p id="firstname"></p>
                 <p id="lastname"></p>
+                <p id="firstname"></p>
                 <p id="birthdate"></p>
             </div>
 
@@ -63,11 +92,11 @@
         </div>
     </div>
 
-    <img id="close" src="media/close.png">
+    <img id="close" src="media/close.png" style="display: none;">
 
     <div id="dim_overlay"></div>
 
-    <div class="settings">
+    <div class="settings" style="display: none;">
         <p>Bara de fält du fyller i kommer uppdateras</p>
         <input id="f_firstname" name="firstname" type="text" placeholder="Förnamn">
         <input id="f_lastname" name="lastname" type="text" placeholder="Efternamn">

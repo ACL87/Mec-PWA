@@ -17,6 +17,9 @@ window.onload = function() {
 
     var settings_menu = $(".settings");
     var dim_overlay = $("#dim_overlay");
+    var card = $(".card");
+    var close = $("#close");
+    var start_container = $(".start-container");
 
     settings_menu.hide();
 
@@ -38,6 +41,16 @@ window.onload = function() {
         hideSettings();
     });
 
+    $("#navbar-bottom").click(function() {
+        showCard();
+    });
+
+    close.click(function() {
+        card.hide();
+        start_container.show();
+        close.hide();
+    });
+
     setDefaults();
     setCustoms();
 
@@ -51,10 +64,16 @@ window.onload = function() {
         settings_menu.hide();
     }
 
+    function showCard() {
+        card.show();
+        close.show();
+        start_container.hide();
+    }
+
     function setDefaults() {
         let date = new Date();
         //6 months 12days from now
-        let expiryDate = new Date(date.getFullYear(), date.getMonth() + 6, date.getDate() + 12);
+        let expiryDate = new Date(date.getFullYear(), date.getMonth() + 4, 0);
         let termTxt = (date.getMonth() < 6) ? "VT " : "HT ";
         termTxt += date.getFullYear().toString().substr(-2);
 
